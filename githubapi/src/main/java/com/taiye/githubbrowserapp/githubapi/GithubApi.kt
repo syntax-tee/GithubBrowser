@@ -2,12 +2,15 @@ package com.taiye.githubbrowserapp.githubapi
 
 import com.taiye.githubbrowserapp.githubapi.model.RepoApiModel
 import com.taiye.githubbrowserapp.githubapi.model.UserApiModel
+import javax.inject.Inject
+import javax.inject.Singleton
 
 interface GithubApi {
      fun getTopRepositories(): List<RepoApiModel>
 }
 
-class MockGitHubAPi:GithubApi{
+@Singleton
+class MockGitHubApi @Inject constructor():GithubApi{
     override fun getTopRepositories(): List<RepoApiModel> {
         return  listOf(
             RepoApiModel(
