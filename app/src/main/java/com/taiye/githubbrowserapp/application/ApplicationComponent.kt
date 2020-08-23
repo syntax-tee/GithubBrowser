@@ -1,4 +1,4 @@
-package com.taiye.githubbrowserapp.applicaton
+package com.taiye.githubbrowserapp.application
 
 import android.content.Context
 import dagger.BindsInstance
