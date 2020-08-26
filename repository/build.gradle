@@ -37,7 +37,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     //githubapi dependency
-    implementation project(":githubapi")
+    api project(":githubapi")
     //dagger dependency
     implementation deps.dagger.core
 
