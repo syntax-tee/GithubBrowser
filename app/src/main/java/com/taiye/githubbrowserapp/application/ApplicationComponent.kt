@@ -1,6 +1,7 @@
 package com.taiye.githubbrowserapp.application
 
 import android.content.Context
+import com.taiye.githubappbrowser.appdeps.ApplicationDeps
 import com.taiye.githubbrowserapp.githubapi.GithubApiModule
 import com.taiye.githubbrowserapp.repository.AppRepository
 import dagger.BindsInstance
@@ -10,9 +11,8 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(modules = [GithubApiModule::class])
-interface ApplicationComponent {
+interface ApplicationComponent :ApplicationDeps {
 
-    fun appRepository(): AppRepository
 
     @Component. Factory
     interface  Factory {
