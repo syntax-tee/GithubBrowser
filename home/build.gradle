@@ -32,6 +32,8 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     //project dependency
+    implementation project(":appdeps")
+    implementation project(":di")
     implementation project(":repository")
 
     //layout

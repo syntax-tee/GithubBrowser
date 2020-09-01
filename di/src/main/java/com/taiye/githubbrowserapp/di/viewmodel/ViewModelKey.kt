@@ -1,5 +1,8 @@
 package com.taiye.githubbrowserapp.di.viewmodel
 
+import androidx.lifecycle.ViewModel
+import dagger.MapKey
 import kotlin.reflect.KClass
 
-annotation  class ViewModelKey(val classKey: KClass<out ViewModelKey>)
+@MapKey
+annotation  class ViewModelKey(val classKey: KClass<out ViewModel>)
