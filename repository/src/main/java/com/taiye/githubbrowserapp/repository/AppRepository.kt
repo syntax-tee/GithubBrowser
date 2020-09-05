@@ -1,6 +1,7 @@
 package com.taiye.githubbrowserapp.repository
 
 import com.taiye.githubbrowserapp.githubapi.GithubApi
+import com.taiye.githubbrowserapp.githubapi.TopRepoSearchResult
 import com.taiye.githubbrowserapp.githubapi.model.RepoApiModel
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -10,7 +11,8 @@ import javax.inject.Singleton
 class AppRepository @Inject constructor(
       private val githubApi: GithubApi
 ){
-    fun getTopRepos():List<RepoApiModel>{
-        return githubApi.getTopRepositories()
+    suspend  fun getTopRepos():List<RepoApiModel>{
+        return githubApi.getTopRepositories().items
     }
 }
+

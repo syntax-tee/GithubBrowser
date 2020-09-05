@@ -1,4 +1,4 @@
-package com.taiye.githubbrowserapp.application
+package com.taiye.appcomponent
 
 import android.content.Context
 import com.taiye.githubappbrowser.appdeps.ApplicationDeps

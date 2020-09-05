@@ -30,6 +30,11 @@ dependencies {
     implementation project(":appdeps")
     implementation project(":githubapi")
     implementation project(":repository")
+    implementation project(":home")
+    implementation project(":appcomponent")
+
+
+    implementation deps.androidx.fragment
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

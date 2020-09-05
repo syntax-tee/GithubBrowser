@@ -1,6 +1,7 @@
 package com.taiye.githubbrowserapp.application
 
 import android.app.Application
+import com.taiye.appcomponent.DaggerApplicationComponent
 import com.taiye.githubappbrowser.appdeps.ApplicationDeps
 import com.taiye.githubappbrowser.appdeps.HasApplicationDeps
 

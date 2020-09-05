@@ -1,4 +1,4 @@
-package com.taiye.githubbrowserapp.home
+package com.taiye.githubbrowserapp.testing.app
 
 import org.junit.Test
 

@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.taiye.githubbrowserapp.testing.app.GithubBrowserTestRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -26,6 +26,16 @@ android {
     viewBinding{
         enabled true
     }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+    kotlinOptions {
+        jvmTarget =  JavaVersion.VERSION_1_8.toString()
+    }
+
 }
 
 dependencies {
@@ -39,6 +49,7 @@ dependencies {
     //layout
     implementation deps.androidx.recyclerview
     implementation deps.androidx.constraintlayout
+    implementation deps.androidx.fragment
     implementation deps.androidx.viewmodel
     implementation deps.androidx.livedata
 
@@ -46,11 +57,21 @@ dependencies {
     implementation deps.dagger.core
     kapt deps.dagger.compiler
 
+    //testing
+    testImplementation 'junit:junit:4.12'
+    testImplementation deps.androidx.archTesting
+    testImplementation  deps.truth
+
+
+    implementation deps.coroutines.android
+    implementation  deps.coroutines.test
+    testImplementation project(":testing:app")
+
+    androidTestImplementation deps.androidx.fragmenttesting
+    androidTestImplementation project(":testing:app")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
